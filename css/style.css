@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+body {
+    font-family: "Merriweather Sans",sans-serif;
+    color: #4c6986;
+}
+
+.title {
+    max-width: 500px;
+}
+
+.wrapper {
+    max-width: 1440px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.restart{
+    width: 175px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 2px solid #4c6986;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
+
+}
+
+.restart:hover {
+    background: #4c6986;
+    color: white;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+}
+
+.header {
+    display: flex;
+    color: #9a9a9a;
+    font-size: 24px;
+}
+
+.header .player-x {
+    flex:1;
+    border-bottom: 5px solid #eee;
+    padding-bottom: 8px;
+}
+
+.player-X.active {
+    color: aquamarine;
+    border-color: #42bed7;
+}
+
+
+.header .player-O {
+    flex:1;
+    border-bottom: 5px solid #eee;
+    padding-bottom: 8px;
+}
+
+.player-O.active {
+    color: #d7d7d7;
+    border: color #D7BAFB; ;
+}
+
+.board {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 0px;
+    flex-grow: 1;
+}
+
+.board-title {
+    display: flex;
+    justify-content: flex;
+    align-items: center;
+    font-size: 80px;
+    background: white;
+}
+
+.board-title:not(:nth-child(3n)) {
+    border-right: 3px solid rgba(137,163,189,0.58);
+}
+
+.board-title:not(:nth-last-child(-n+3)) {
+    border-bottom: 3px solid rgba(137,163,189,0.7);
+}
+
+.board-title:hover {
+    background: #eee;
+}
+
+.tile-x{
+    color:#42bed7
+};
+
+.tile-O{
+    color: #d7d7d7;
+}
+
+.tile-winner span{
+
+    color: #23ce6b;
+}
+
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .left {
+        margin-bottom: 50px;
+    }
+}
